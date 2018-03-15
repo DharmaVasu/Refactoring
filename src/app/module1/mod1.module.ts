@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpModule } from "@angular/http";
+
 
 import { comp1Component } from './components/comp1.component';
-import {router} from './mod1.router';
+import { router } from './mod1.router';
+import { modService } from './services/mod1.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +13,10 @@ import {router} from './mod1.router';
   ],
   imports: [
     CommonModule,
+    HttpModule,
     router
   ],
-  providers: [],
+  providers: [modService],
   bootstrap: []
 })
 export class mod1Module { }

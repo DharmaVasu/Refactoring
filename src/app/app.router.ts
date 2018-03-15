@@ -7,8 +7,9 @@ const routes = [
         loadChildren: './module1/mod1.module#mod1Module'
     },
     {
-        path:'mod2',
-        loadChildren: './module2/mod2.module#mod2Module'
+        path: '',
+        component: AppComponent,
+        pathMatch: 'full'
     }
 ];
 
